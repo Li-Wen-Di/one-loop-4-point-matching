@@ -213,14 +213,15 @@ Program symbols `mh`, `ml`, `lam0`, `lam1`, `lam2`, `c4`, `cd`, and `c6` mean $M
 $$
 B(s;m_L^2,m_L^2)
 =\frac1\epsilon+\ln\frac{\mu^2}{m_L^2}+2
-+\operatorname{DiscB}(s,m_L,m_L)+\mathcal O(\epsilon),
-$$
-$$
-B_R(s;m_L^2,m_L^2)
-=\ln\frac{\mu^2}{m_L^2}+2+\operatorname{DiscB}(s,m_L,m_L).
++\mathrm{DiscB}(s,m_L,m_L)+\mathcal O(\epsilon),
 $$
 
-In particular, $\operatorname{DiscB}(0,m_L,m_L)=-2$, so $B_R(0;m_L^2,m_L^2)=\ln(\mu^2/m_L^2)$. Light tadpole terms have already been evaluated using
+$$
+B_R(s;m_L^2,m_L^2)
+=\ln\frac{\mu^2}{m_L^2}+2+\mathrm{DiscB}(s,m_L,m_L).
+$$
+
+In particular, $\mathrm{DiscB}(0,m_L,m_L)=-2$, so $B_R(0;m_L^2,m_L^2)=\ln(\mu^2/m_L^2)$. Light tadpole terms have already been evaluated using
 
 $$
 A(m_L^2)=m_L^2\left[\frac1\epsilon+1-\ln\frac{m_L^2}{\mu^2}\right]

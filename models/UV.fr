@@ -1,0 +1,14 @@
+M$ModelName = "TwoScalarUV";
+M$Information = {Authors -> {"Local EFT diagram check"}, Version -> "1.0", Date -> "2026-11-05"};
+M$GaugeGroups = {};
+M$InteractionOrderHierarchy = {{QED, 1}};
+M$Parameters = {
+ lam0 == {ParameterType -> External, Value -> 0.2, InteractionOrder -> {QED, 2}, Description -> "light quartic"},
+ lam1 == {ParameterType -> External, Value -> 0.3, InteractionOrder -> {QED, 1}, Description -> "heavy-light cubic divided by MH"},
+ lam2 == {ParameterType -> External, Value -> 0.4, InteractionOrder -> {QED, 2}, Description -> "mixed quartic"}
+};
+M$ClassesDescription = {
+ S[1] == {ClassName -> phi, SelfConjugate -> True, Mass -> {ml, 1}, Width -> 0, PDG -> {9000001}, ParticleName -> "phi", PropagatorLabel -> "phi", PropagatorType -> ScalarDash},
+ S[2] == {ClassName -> hh, SelfConjugate -> True, Mass -> {MH, 10}, Width -> 0, PDG -> {9000002}, ParticleName -> "hh", PropagatorLabel -> "H", PropagatorType -> ScalarDash}
+};
+LUV = del[phi, mu] del[phi, mu]/2 - ml^2 phi^2/2 + del[hh, mu] del[hh, mu]/2 - MH^2 hh^2/2 - lam0 phi^4/24 - lam1 MH hh phi^2/2 - lam2 hh^2 phi^2/4;

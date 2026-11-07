@@ -1,0 +1,15 @@
+M$ModelName = "ScalarGreenEFT";
+M$Information = {Authors -> {"Local EFT diagram check"}, Version -> "1.0", Date -> "2026-11-05"};
+M$GaugeGroups = {};
+M$InteractionOrderHierarchy = {{QED, 1}};
+M$Parameters = {
+ MH == {ParameterType -> External, Value -> 10, Description -> "heavy scale"},
+ C4 == {ParameterType -> External, Value -> -0.07, InteractionOrder -> {QED, 2}, Description -> "tree Green quartic"},
+ CD == {ParameterType -> External, Value -> 0.36, InteractionOrder -> {QED, 2}, Description -> "tree Green derivative coefficient"},
+ C6 == {ParameterType -> External, Value -> 1.62, InteractionOrder -> {QED, 4}, Description -> "tree Green sextic coefficient"}
+};
+M$ClassesDescription = {
+ S[1] == {ClassName -> phi, SelfConjugate -> True, Mass -> {ml, 1}, Width -> 0, PDG -> {9000001}, ParticleName -> "phi", PropagatorLabel -> "phi", PropagatorType -> ScalarDash}
+};
+(* -CD phi^3 Box[phi]/(24 MH^2) is integrated by parts, without equations of motion. *)
+LEFT = del[phi, mu] del[phi, mu]/2 - ml^2 phi^2/2 - C4 phi^4/24 + CD phi^2 del[phi, mu] del[phi, mu]/(8 MH^2) - C6 phi^6/(720 MH^2);

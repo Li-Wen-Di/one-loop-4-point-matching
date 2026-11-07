@@ -1,0 +1,6 @@
+#!/bin/sh
+# Adapt FeAmGen's no-argument call to QGRAF 4 and retain its startup diagnostics.
+"$APPENDIXA_QGRAF" qgraf.dat > appendixa-qgraf.stdout 2>&1
+status=$?
+cat appendixa-qgraf.stdout
+exit "$status"

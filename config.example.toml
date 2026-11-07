@@ -1,0 +1,6 @@
+# Set absolute executable paths, or leave empty to use environment variables / PATH.
+[executables]
+form = ""
+qgraf = ""
+wolframscript = ""
+python = ""

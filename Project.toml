@@ -1,0 +1,6 @@
+[deps]
+FeAmGen = "09acbd30-6a93-4470-b10f-afabe20e3192"
+
+[compat]
+FeAmGen = "=1.1.5"
+julia = "1.10"

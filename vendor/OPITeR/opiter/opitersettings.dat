@@ -1,0 +1,18 @@
+*-----------------------------------
+* input:
+*-----------------------------------
+*tensormode 1=without integrand symmetries
+*tensormode 2=with integrand symmetries
+
+#define tensormode "2"
+
+*tensorbasis 1=dual-transverse basis (dt_(mu,nu),dual(p,mu))
+*tensorbasis 2=standard basis (d_(mu,nu),p(mu))
+
+#define tensorbasis "1"
+*-----------------------------------
+
+* set the higest rank of tensor projectors are needed 
+#define MaxN "12" 
+* set the higest number of extenal momenta needed
+#define MaxE "4"
